@@ -4,10 +4,14 @@ from processor.merger import merger
 from processor.compactor import compactor
 
 
-downloadedPdfPaths = downloadPdfs(pdfs)
+def run():
+    downloadedPdfPaths = downloadPdfs(pdfs)
 
-downloadedPdfPaths.sort()
+    downloadedPdfPaths.sort()
 
-mergedFilePath = merger(downloadedPdfPaths)
+    mergedFilePath = merger(downloadedPdfPaths)
 
-compactor(mergedFilePath)
+    compactor(mergedFilePath)
+
+
+run()
