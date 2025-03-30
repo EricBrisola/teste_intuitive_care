@@ -2,13 +2,13 @@ from zipfile import ZipFile
 import os
 
 
-def compactor(fileToZip):
+def compactor(fileToZip, compressedFileName):
     if not fileToZip:
         print("Necessário um arquivo para compactar")
         return
 
     try:
-        with ZipFile("data/zipped/compressedPdfs.zip", "w") as zip:
+        with ZipFile(f"data/zipped/{compressedFileName}.zip", "w") as zip:
             zip.write(fileToZip, arcname=os.path.basename(fileToZip))
             print("Compactado com sucesso!")
 
