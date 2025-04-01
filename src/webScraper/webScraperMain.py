@@ -1,7 +1,7 @@
 from scraper.pdfList import pdfs
-from webScraper.scraper.downloadPdfs import downloadPdfs
-from webScraper.processor.mergeFiles import merger
-from webScraper.processor.compactFiles import compactor
+from scraper.downloadPdfs import downloadPdfs
+from processor.mergeFiles import merger
+from processor.compactFiles import compactor
 
 
 def run():
